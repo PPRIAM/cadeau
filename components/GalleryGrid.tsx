@@ -13,7 +13,6 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
           key={src}
           className="relative overflow-hidden rounded-xl shadow-md group"
         >
-          {/* Image optimisée */}
           // components/GalleryGrid.tsx
 <Image
   src={src}
@@ -23,7 +22,7 @@ export default function GalleryGrid({ images }: GalleryGridProps) {
   /* seulement 57 – 80 en unoptimized */
   unoptimized={() => {
     const n = parseInt(src.match(/\d+/)?.[0] || '0', 10);
-    return n >= 57 && n <= 81;
+    return n >= 57 && n <= 80;
   }()}
   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
 />
