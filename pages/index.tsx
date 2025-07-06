@@ -1,115 +1,56 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import Head from 'next/head';
+import Link from 'next/link';
+import { Dancing_Script, Quicksand } from 'next/font/google';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const dancing = Dancing_Script({ subsets: ['latin'], weight: ['400', '700'] });
+const quicksand = Quicksand({ subsets: ['latin'], weight: ['400', '600', '700'] });
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    <>
+      <Head>
+        <title>Joyeux Anniversaire Hernandie 🥳</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Une surprise pleine d'humour et de poésie" />
+      </Head>
+
+      {/* bg-gradient pour toute la page */}
+      <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50 text-gray-800">
+        {/* Conteneur central fluide */}
+        <main className={`mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-screen ${quicksand.className}`}>
+          {/* Héros */}
+          <section className="w-full text-center">
+            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 ${dancing.className}`}>
+              Joyeux&nbsp;Anniversaire&nbsp;<span className="whitespace-nowrap">Hernandie&nbsp;🥳</span>
+            </h1>
+
+            <p className="mx-auto mb-8 leading-relaxed text-lg sm:text-xl max-w-xl">
+              Que tes bougies dansent comme nos éclats&nbsp;de&nbsp;rires&nbsp;!<br />
+              Aujourd’hui, le calendrier a décidé de faire rimer&nbsp;« Hernandie » avec&nbsp;« magie ».
+            </p>
+
+            {/* Bouton responsive */}
+            <Link
+              href="/gallery"
+              className="inline-block bg-rose-400 hover:bg-rose-500 text-white font-semibold py-3 px-6 sm:px-8 rounded-xl shadow-lg transition-transform hover:scale-105"
+            >
+              Plongeons dans les souvenirs
+            </Link>
+          </section>
+
+          {/* Citation biblique */}
+          <blockquote className="mt-12 max-w-md text-center italic text-gray-700 border-l-4 border-rose-300 pl-4">
+            « La main droite de l’Éternel est élevée ; la main droite de l’Éternel fait des prodiges.  
+            Je ne mourrai pas, je vivrai, et je raconterai les œuvres de l’Éternel. »  
+            <span className="not-italic font-semibold block mt-2">— Psaumes 118 : 16-17</span>
+          </blockquote>
+        </main>
+
+        {/* Footer fixé en bas sur mobile, en flux normal sur grand écran */}
+        <footer className="w-full text-center py-4 text-sm text-gray-500">
+          © {new Date().getFullYear()} — Avec tout mon amour
+        </footer>
+      </div>
+    </>
   );
 }
