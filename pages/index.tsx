@@ -17,34 +17,32 @@ export default function Home() {
       {/* bg-gradient pour toute la page */}
       <div className="min-h-screen bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50 text-gray-800">
         {/* Conteneur central fluide */}
-        <main className={`mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center min-h-screen ${quicksand.className}`}>
-          {/* Héros */}
-          <section className="w-full text-center">
-            <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 ${dancing.className}`}>
-              Joyeux&nbsp;Anniversaire&nbsp;<span className="whitespace-nowrap">Hernandie&nbsp;🥳</span>
-            </h1>
+        <main
+  className={`min-h-screen flex flex-col items-center justify-center
+  bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50
+  text-gray-800 px-4 sm:px-6 ${quicksand.className}`}
+>
+  <section className="w-full max-w-screen-sm text-center">
+    <h1 className={`text-4xl sm:text-5xl font-bold mb-4 break-words ${dancing.className}`}>
+      Joyeux Anniversaire Hernandie 🥳
+    </h1>
 
-            <p className="mx-auto mb-8 leading-relaxed text-lg sm:text-xl max-w-xl">
-              Que tes bougies dansent comme nos éclats&nbsp;de&nbsp;rires&nbsp;!<br />
-              Aujourd’hui, le calendrier a décidé de faire rimer&nbsp;« Hernandie » avec&nbsp;« magie ».
-            </p>
+    <p className="mb-8 text-lg sm:text-xl leading-relaxed px-2">
+      Que tes bougies dansent comme nos éclats de rires !<br />
+      Aujourd’hui, le calendrier a décidé de faire rimer « Hernandie » avec « magie ».
+    </p>
 
-            {/* Bouton responsive */}
-            <Link
-              href="/gallery"
-              className="inline-block bg-rose-400 hover:bg-rose-500 text-white font-semibold py-3 px-6 sm:px-8 rounded-xl shadow-lg transition-transform hover:scale-105"
-            >
-              Plongeons dans les souvenirs
-            </Link>
-          </section>
+    <Link
+      href="/gallery"
+      className="inline-block bg-rose-400 hover:bg-rose-500 text-white
+      font-semibold py-3 px-6 rounded-xl shadow-lg
+      transition-transform hover:scale-105"
+    >
+      Plongeons dans les souvenirs
+    </Link>
+  </section>
+</main>
 
-          {/* Citation biblique */}
-          <blockquote className="mt-12 max-w-md text-center italic text-gray-700 border-l-4 border-rose-300 pl-4">
-            « La main droite de l’Éternel est élevée ; la main droite de l’Éternel fait des prodiges.  
-            Je ne mourrai pas, je vivrai, et je raconterai les œuvres de l’Éternel. »  
-            <span className="not-italic font-semibold block mt-2">— Psaumes 118 : 16-17</span>
-          </blockquote>
-        </main>
 
         {/* Footer fixé en bas sur mobile, en flux normal sur grand écran */}
         <footer className="w-full text-center py-4 text-sm text-gray-500">
