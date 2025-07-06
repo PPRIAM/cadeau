@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import GalleryGrid from '@/components/GalleryGrid';
 
-const images = Array.from({ length: 95 }, (_, i) => {
+const images = Array.from({ length: 104 }, (_, i) => {
   const num = String(i + 1).padStart(2, '0');
   return { src: `/images/${num}.jpg`, alt: `Souvenir ${num}` };
 });
