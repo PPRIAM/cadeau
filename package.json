@@ -2,6 +2,8 @@
   "name": "cadeau",
   "version": "0.1.0",
   "private": true,
+  "build": "next build",
+  "start": "next start",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
